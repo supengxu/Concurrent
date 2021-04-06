@@ -5,7 +5,9 @@ import java.util.concurrent.locks.ReentrantLock;
 public class ReentrantXexample {
     static ReentrantLock a = new ReentrantLock();
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         a.lock();
+        a.lockInterruptibly();
+        a.unlock();
     }
 }
