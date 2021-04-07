@@ -9,5 +9,6 @@ public class ReentrantXexample {
         a.lock();
         a.lockInterruptibly();
         a.unlock();
+
     }
 }
