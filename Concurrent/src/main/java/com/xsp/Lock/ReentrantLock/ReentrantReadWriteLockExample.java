@@ -5,11 +5,11 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.*;
 
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.locks.ReentrantLock;
+import java.util.concurrent.locks.ReentrantReadWriteLock;
+
 public class ReentrantReadWriteLockExample {
-    public static void main(String[] args) {
-        System.out.println(findMin(new int[]{5,1}));
-        ;
-    }
 
     public static String longestPalindrome(String s) {
         boolean[][] dp = new boolean[s.length()][s.length()];
@@ -172,4 +172,10 @@ public class ReentrantReadWriteLockExample {
     }
 
 
+    static ReentrantReadWriteLock a = new ReentrantReadWriteLock();
+    public static void main(String[] args) {
+        ReentrantReadWriteLock.WriteLock writeLock = a.writeLock();
+        writeLock.lock();
+
+    }
 }

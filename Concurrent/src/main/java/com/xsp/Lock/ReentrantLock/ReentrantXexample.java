@@ -1,6 +1,7 @@
 package com.xsp.Lock.ReentrantLock;
 
 import java.util.concurrent.locks.Condition;
+import java.util.concurrent.Semaphore;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class ReentrantXexample {
